@@ -2,7 +2,7 @@
 </div>
 
 <style>
-  /* Contenedor principal */
+
   .bg-container {
     position: fixed;
     width: 100%;
@@ -11,16 +11,16 @@
     overflow: hidden;
   }
 
-  /* Capa con la imagen de fondo y opacidad */
+
   .bg-container::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('./fondo-fervor.png');
+    background-image: url('/fondo-fervor.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.21; /* Aquí establecemos la opacidad del fondo */
+    opacity: 0.4;
     animation: noise 0.2s infinite;
   }
 
