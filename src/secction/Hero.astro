@@ -2,9 +2,26 @@
 import HeroLogo from "@/components/HeroLogo.astro"
 ---
 
-<section>
-    <HeroLogo />
-    <span class="uppercase text-white bg-black px-2 py-1">
-        aksjdkasjdkasjd
+<section class="animate-fade-in animate-delay-300 relative flex flex-col justify-center items-center transform translate-y-[50px]">
+  <!-- Contenedor del texto con ajustes responsivos -->
+  <div class="absolute bottom-[-20px] z-10 w-full max-w-[90%] sm:max-w-[80%] md:max-w-[60%] flex items-center justify-center text-center">
+    <span 
+      style="font-family: 'Hanson', sans-serif;" 
+      class="text-primary text-[16px] sm:text-[20px] md:text-[25px] tracking-[3px] sm:tracking-[4px] md:tracking-[5px] whitespace-nowrap flex items-center">
+      <!-- Comilla inicial reflejada horizontalmente -->
+      <span 
+        style="transform: scaleX(-1);" 
+        class="mr-1">
+        &quot;
+      </span>
+      <!-- Texto principal con Hanson -->
+      UNÁNIMES EN ADORACIÓN
+      <!-- Comilla final -->
+      <span class="ml-1">
+        &quot;
+      </span>
     </span>
+  </div>
+  <HeroLogo class="text-primary animate-fade-in-up w-auto h-auto md:w-[200] mx-[20px] sm:mx-0" />
+
 </section>
