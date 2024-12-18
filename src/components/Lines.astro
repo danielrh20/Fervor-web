@@ -2,7 +2,6 @@
 </div>
 
 <style>
-
   .bg-container {
     position: fixed;
     width: 100%;
@@ -11,7 +10,7 @@
     overflow: hidden;
   }
 
-
+  /* Imagen de fondo */
   .bg-container::before {
     content: "";
     position: absolute;
@@ -21,7 +20,27 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.4;
-    animation: noise 0.2s infinite;
+    z-index: 1; /* Para que esté debajo del granulado */
   }
 
+  /* Granulado animado */
+  .bg-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/noise.png'); /* Patrón de ruido */
+    opacity: 0.2;
+    z-index: 2; /* Encima de la imagen de fondo */
+    animation: grain-animation 0.5s steps(10) infinite;
+  }
+
+  /* Animación de ruido */
+  @keyframes grain-animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-10px, -10px);
+    }
+  }
 </style>
