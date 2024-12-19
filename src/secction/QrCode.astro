@@ -1,5 +1,5 @@
 <section class="animate-pop mt-32 mx-auto flex flex-col justify-center items-center text-center text-secondary transform translate-y-20 scale-110" style="margin-top: 300px;">
-    <a target="_blank" rel="noopener" href="nequi://pagar?monto=12000&destinatario=3137320760" class="logo-nequi hover-scale">
+    <a target="_blank" rel="noopener" href="nequi://pagar?monto=12000&destinatario=3137320760" class="logo-nequi hover-scale" aria-label="Pagar con Nequi">
       <img src="./logo_nequi.svg" alt="Logo de Nequi" />
     </a>
   
@@ -7,7 +7,7 @@
       <div class="qr-container-second"></div>
       <div class="qr-container">
         <a target="_blank" rel="noopener">
-          <img src="./qr_nequi.svg" alt="Código QR de nequi" />
+          <img src="./qr_nequi.svg" alt="Código QR de Nequi" />
         </a>
       </div>
     </div>
@@ -17,13 +17,12 @@
         316 3168026
       </a>
   
-      <a style="font-family: 'Hanson', sans-serif; border-radius: 4px; color: #5c59f1; transform: translateY(-45px); position: relative; z-index: 1; padding-left: 1.690rem; padding-right: 1.690rem; padding-top: 1.15rem; padding-bottom: 0.25rem; line-height: 1;" class="bg-tertiary tracking-[2px] font-medium text-lg px-7 py-1 mt-8 rounded transition transform" href="" target="_blank" rel="noopener noreferrer">
+      <a style="font-family: 'Hanson', sans-serif; border-radius: 4px; color: #5c59f1; transform: translateY(-45px); position: relative; z-index: 1; padding-left: 1.690rem; padding-right: 1.690rem; padding-top: 1.15rem; padding-bottom: 0.25rem; line-height: 1;" class="bg-tertiary tracking-[2px] font-medium text-lg px-7 py-1 mt-8 rounded transition transform" href="mailto:emilia.jacome@ejemplo.com" target="_blank" rel="noopener noreferrer">
         Emilia Jacome
       </a>
     </div>
   </section>
   
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const phoneNumberElement = document.getElementById("phoneNumber");
@@ -42,15 +41,16 @@ document.addEventListener("DOMContentLoaded", function() {
       document.execCommand("copy");
       // Eliminar el campo del documento
       document.body.removeChild(tempInput);
-      // Mostrar una alerta de confirmación
-      alert("Número copiado al portapapeles");
+      // Mostrar un mensaje visual en lugar de alert
+      phoneNumberElement.innerText = "Número copiado!";
+      setTimeout(() => phoneNumberElement.innerText = "316 3168026", 2000); // Revertir texto después de 2 segundos
     });
   } else {
     console.error("Elemento con ID 'phoneNumber' no encontrado.");
   }
 });
-
 </script>
+
 
 <style>
 
@@ -118,4 +118,3 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 </style>
-
