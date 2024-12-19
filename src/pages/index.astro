@@ -1,18 +1,21 @@
 ---
 import Layout from "@/layouts/Layout.astro"
+import Styles from "@/styles/globals.css"
 
 import Countdown from "@/secction/Countdown.astro"
 import Footer from "@/secction/Footer.astro"
 import Hero from "@/secction/Hero.astro"
 import Info from "@/secction/Info.astro"
 import PrincipalDate from "@/secction/PrincipalDate.astro"
+import QrCode from "@/secction/QrCode.astro"
 ---
 
-<Layout title="Fervor">
+<Layout title="Fervor - Tarde de alabanza de Ipuc Los Trupillos">
 	<Hero />
 	<main>
 		<PrincipalDate />
 		<Info />
+		<QrCode />
 		<Countdown />
 	</main>
 	<Footer />

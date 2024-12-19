@@ -1,0 +1,139 @@
+<section 
+  class="animate-pop mt-32 mx-auto flex flex-col justify-center items-center text-center text-secondary transform translate-y-20 scale-110"
+  style="margin-top: 300px;">
+
+  <a 
+    target="_blank"
+    rel="noopener"
+    href="nequi://pagar?monto=12000&destinatario=3137320760"
+    class="logo-nequi hover-scale"
+  >
+    <img src="./logo_nequi.svg" alt="Logo de Nequi" />
+  </a>
+
+  <div class="container-background">
+    
+    <div class="qr-container-second"></div>
+
+    <div class="qr-container">
+      <a 
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="./qr_nequi.svg" alt="Código QR de nequi" />
+      </a>
+    </div>
+  </div>
+  
+  <div class="mt-32 mx-auto flex flex-col justify-center items-center text-center text-secondary transform scale-110" 
+       style="transform: translateY(-130px);">
+
+    <!-- Número con funcionalidad de copiar -->
+    <a
+        id="phoneNumber"
+        style="font-family: 'Hanson', sans-serif; border-radius: 4px; position: relative; z-index: 2;" 
+        class="bg-primary text-white tracking-[2px] font-medium text-2xl px-4 py-2 mt-8 rounded transition transform hover:scale-110"
+        href="javascript:void(0);" 
+        onclick="copyToClipboard('316 3168026')"
+        target="_blank"
+        rel="noopener noreferrer">
+        316 3168026
+    </a>
+    
+    <!-- Nombre -->
+    <a
+        style="font-family: 'Hanson', sans-serif; border-radius: 4px; color: #5c59f1; transform: translateY(-45px); position: relative; z-index: 1;  padding-left: 1.690rem; padding-right: 1.690rem; padding-top: 1.15rem; padding-bottom: 0.25rem; line-height: 1;" 
+        class="bg-tertiary tracking-[2px] font-medium text-lg px-7 py-1 mt-8 rounded transition transform"
+        target="_blank"
+        rel="noopener noreferrer">
+        Emilia Jacome
+    </a>
+  </div>
+</section>
+
+<style>
+
+.logo-nequi {
+  position: absolute;
+  top: 200px; 
+  z-index: 3; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.logo-nequi img {
+  height: auto;
+  max-width: 710px; 
+}
+
+.container-background {
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 15px;
+  height: 270px; 
+  width: 200px;
+  z-index: -2;
+  transition: transform 0.3s ease-in-out;
+}
+
+.qr-container-second {
+  background-color: #2a2488; 
+  border-radius: 15px;
+  height: 185px; 
+  width: 170px; 
+  position: absolute;
+  top: 65px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; 
+  overflow: hidden;
+}
+
+.qr-container {
+  background-color: #4138ca; 
+  padding: 20px 15px;
+  border-radius: 15px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  height: 176px; 
+  width: 171px;
+  transform: translateY(20px);
+  z-index: 2;
+}
+
+.qr-container img {
+  display: block; 
+  max-width: 100%;
+  height: auto;
+  border-radius: 0px; 
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+}
+
+</style>
+
+<!-- Script para copiar al portapapeles -->
+<script>
+    function copyToClipboard(text) {
+        // Crea un elemento temporal de texto
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        
+        // Selecciona el texto y copia al portapapeles
+        textArea.select();
+        document.execCommand('copy');
+        
+        // Elimina el elemento temporal
+        document.body.removeChild(textArea);
+        
+        // Opcional: puedes agregar una notificación o algún efecto visual aquí si lo deseas
+        alert('Número copiado al portapapeles!');
+    }
+</script>
