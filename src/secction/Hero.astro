@@ -10,12 +10,12 @@ import HeroLogo from "@/components/HeroLogo.astro"
     }
   </style>
   
-  <section class="animate-fade-in animate-delay-300 relative flex flex-col justify-center items-center transform md:translate-y-[-100px] sm:mt-[200px] mt-[110px] sm:mt-[200px]">  
+  <section class="animate-fade-in animate-delay-300 relative flex flex-col justify-center items-center transform md:translate-y-[-100px] sm:mt-[200px] mt-[110px]">  
     <!-- Contenedor del texto con ajustes responsivos -->
     <div class="absolute bottom-[-20px] z-10 w-full max-w-[90%] sm:max-w-[80%] md:max-w-[60%] flex items-center justify-center text-center">
       <span 
         style="font-family: 'Hanson', sans-serif;" 
-        class="text-primary text-[16px] sm:text-[10px] md:text-[29px] tracking-[3px] sm:tracking-[4px] md:tracking-[5px] whitespace-nowrap flex items-center text-reduce">
+        class="text-primary text-xs sm:text-sm md:text-lg tracking-[3px] sm:tracking-[4px] md:tracking-[5px] whitespace-nowrap flex items-center transform translate-y-[-15px]">
         <!-- Comilla inicial reflejada horizontalmente -->
         <span 
           style="transform: scaleX(-1);" 
@@ -32,6 +32,8 @@ import HeroLogo from "@/components/HeroLogo.astro"
     </div>
     
     <!-- Logo con ajustes responsivos -->
-    <HeroLogo class="text-primary animate-fade-in-up w-[80%] sm:w-[60%] md:w-[800px] mx-auto sm:mx-0" />
+    <HeroLogo 
+      class="text-primary animate-fade-in-up w-[95%] sm:w-[80%] md:w-[800px] mx-auto sm:mx-0" 
+    />
   </section>
   
